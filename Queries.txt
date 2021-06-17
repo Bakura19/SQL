@@ -5,3 +5,9 @@ SELECT model, speed, hd
 FROM pc
 WHERE price < 500;
 ******************
+Задание 2
+Найти производителей принтеров.
+Решение:
+SELECT DISTINCT maker
+FROM Product
+WHERE type = 'Printer';
