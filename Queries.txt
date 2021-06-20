@@ -12,3 +12,9 @@ SELECT DISTINCT maker
 FROM Product
 WHERE type = 'Printer';
 ***********************
+Задание 3
+Найти номер модели, объём памяти и размеры экранов, цена которых превышает 1000 долларов.
+Решение:
+SELECT model, ram, screen
+FROM Laptop
+WHERE price > '1000';
