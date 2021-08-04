@@ -68,3 +68,21 @@ from printer
 inner join product 
 on printer.model = product.model  
 where product.maker= 'B';
+****************************************
+Задание 8
+
+Найдите производителя, выпускающего ПК, но не ПК-блокноты.
+Решение:
+
+********************************
+Задание 9
+
+Найдите производителей ПК с процессором не менее 450 Мгц. Вывести: Maker
+
+Решение:
+Select maker  
+from pc 
+inner join product 
+on pc.model = product.model 
+where speed >= 450 
+group by maker
