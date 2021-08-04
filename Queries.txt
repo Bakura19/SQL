@@ -46,3 +46,25 @@ SELECT maker, speed
 FROM laptop l, Product p
 WHERE l.model = p.model
 AND l.hd >=10;
+************************
+Задание 7
+
+Найдите номера моделей и цены всех имеющихся в продаже продуктов (любого типа) производителя B.
+Решение:
+Select laptop.model, laptop.price  
+from laptop 
+inner join product 
+on laptop.model = product.model  
+where product.maker= 'B' 
+union 
+select pc.model, pc.price 
+from pc 
+inner join product 
+on pc.model = product.model  
+where product.maker= 'B' 
+union 
+select printer.model, printer.price 
+from printer 
+inner join product 
+on printer.model = product.model  
+where product.maker= 'B';
