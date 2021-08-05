@@ -43,9 +43,9 @@ WHERE price < 600 AND (cd = '12x' OR cd = '24x');
 Для каждого производителя, выпускающего ПК-блокноты c объёмом жесткого диска не менее 10 Гбайт, найти скорости таких ПК-блокнотов. Вывод: производитель, скорость.
 Решение:
 SELECT maker, speed
-FROM laptop l, Product p
-WHERE l.model = p.model
-AND l.hd >=10;
+FROM laptop, Product
+WHERE laptpo.model = product.model
+AND laptop.hd >=10;
 ************************
 Задание 7
 
