@@ -85,4 +85,14 @@ from pc
 inner join product 
 on pc.model = product.model 
 where speed >= 450 
-group by maker
+group by maker;
+****************************
+Задание 10
+
+Найдите модели принтеров, имеющих самую высокую цену. Вывести: model, price
+
+Решение:
+select model, price  
+from printer 
+where price = (select max(price) from printer);
+**************************************************
