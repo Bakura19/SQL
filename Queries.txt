@@ -135,3 +135,13 @@ inner join ships
 on classes.class = ships.class 
 where numguns >= 10;
 **************************************
+Задание 15
+
+Найдите размеры жестких дисков, совпадающих у двух и более PC. Вывести: HD
+
+Решение:
+select hd 
+from pc 
+group by hd 
+having count (model) > 1;
+**************************************
