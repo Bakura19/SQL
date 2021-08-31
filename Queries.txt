@@ -153,6 +153,36 @@ having count (model) > 1;
 Решение:
 select distinct B.model AS model, A.model AS model, A.speed, A.ram 
 from pc AS A, PC B 
-where A.speed = B.speed AND A.ram = B.ram and A.model < B.model
+where A.speed = B.speed AND A.ram = B.ram and A.model < B.model;
 ***************************************************************
+Задание 17
 
+Найдите модели ПК-блокнотов, скорость которых меньше скорости каждого из ПК.
+Вывести: type, model, speed
+
+Решение:
+select distinct type, laptop.model,speed 
+from laptop 
+inner join 
+product
+on laptop.model= product.model  
+where speed < (select MIN(speed) from pc);
+********************************************
+Задание 18
+
+
+
+Решение:
+
+*******************************************
+Задание 19
+
+
+
+Решение:
+*******************************************
+Задание 20
+
+
+Решение:
+********************************************
