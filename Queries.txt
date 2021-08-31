@@ -196,4 +196,9 @@ GROUP BY maker
 Найдите производителей, выпускающих по меньшей мере три различных модели ПК. Вывести: Maker, число моделей ПК.
 
 Решение:
+select maker, count(model)
+from product
+where type='pc'
+group by maker
+having count(model)>=3
 ********************************************
